@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://tg25.iremote.my/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><title>i-Remote</title>
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" />-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />-->
+    <link href="./i-Remote_files/css" rel="stylesheet"><link rel="stylesheet" href="./i-Remote_files/baguetteBox.min.css"><link rel="stylesheet" href="./i-Remote_files/fluid-gallery.css"><link rel="stylesheet" media="screen" href="./i-Remote_files/bootstrap.min.css">
+    <script type="text/javascript" src="./i-Remote_files/iSPY.js"></script>
+    <script type="text/javascript">
+        var myChatRoomId;
+        var parentWin;
+        function OpenChatRoom(chatRoomId, chatRoomPass, blnOn) {
+            if (blnOn == "1") {
+                parentWin = window;
+                //myChatRoomId = window.open("https://www.talk.gg/" + chatRoomPass, chatRoomId, "width=220,height=150;scrollbars=no;toolbar=no");
+                myChatRoomId = window.open(chatRoomPass, chatRoomId, "width=800,height=600;scrollbars=no;toolbar=no");
+            }
+            else
+                myChatRoomId.close();   // Closes the new window
+        }
+
+        function NoRefillAfter8PM(chatRoomId) {
+            alert("No refill tonic water after 8PM. Thanks");
+        }
+
+        function NoCustomerServiceAfter8PM(chatRoomId) {
+            alert("Customer Service off after 8PM. You may contact nurse. Thanks");
+        }
+
+        function SnapshotCam(strAuth, camID)
+        {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    alert("Nice shot!")
+                }
+            };
+            xhttp.open("GET", "/ImageProxy.ashx?url=http://apcare.ddns.net:8090/snapshot%3Fot=2%26oid=" + camID + "%26Auth=" + strAuth, true);
+            xhttp.send();
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="http://tg25.iremote.my/" id="frmClickAlert">
+<div class="aspNetHidden">
+
+
+
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmClickAlert'];
+if (!theForm) {
+    theForm = document.frmClickAlert;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./i-Remote_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./i-Remote_files/ScriptResource.axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="./i-Remote_files/ScriptResource(1).axd" type="text/javascript"></script>
+<script src="./i-Remote_files/ScriptResource(2).axd" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	
+	
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'frmClickAlert', [], ['Timer1','Timer1'], [], 90, '');
+//]]>
+</script>
+
+    <span id="Timer1" style="visibility:hidden;display:none;"></span>
+    <center>
+        <div id="divRemoteControl">
+           
+            
+                    <div class="d-inline-block border border-primary"><div id="divCamera"><img src="./i-Remote_files/ImageProxy.ashx" onerror="iSpyErrorThumb(this)" onload="iSpyGetNextFrame(this,1000,0)" id="iSPY_Cam8">
+<br><input type="button" onclick="javascript: SnapshotCam(&#39;11a15741-b83f-46e7-9314-195d58d8dfbe&#39;,8);" value="Snapshot" id="iSnapshot_Cam8"><!--#CotName#Cot-8_8#CotName#--><!--#Auth#11a15741-b83f-46e7-9314-195d58d8dfbe#Auth#--></div></div>
+                    
+                
+        </div>
+        
+    </center>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.UI._Timer, {"enabled":true,"interval":5000,"uniqueID":"Timer1"}, null, null, $get("Timer1"));
+});
+//]]>
+</script>
+<span style="display: none !important;"><input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""></span><span style="display: none !important;"><input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""></span><span style="display: none !important;"><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="hVipJQtMpnsTvWiS70pDefcS2P8CjsSVFZO5LwWosRhBUnWBQV+7ANZ52IUiKvhRt1iBwafHUB+qJJdmSeE29s4uT4q5ZOZjVuB93wVS06OH66U9XHPb4rt608HC/M2GTQUtBvi4jEwf38vocZhlq44/1vH9D8asQxAhGGtmqGPf3wIFvs8eerUIzX9QQfhtiwwrFUWrrp96lk8DU0tM2Dv0n3LCtvTDhuEqwILU/36qW2yIuiYbfoKqpmT6dO4L7ADLL9bQjM/kIMPGz+eX+Pk76BYXh+VEM8uEvpQCn0iPAaL79g8aZIaONHwO9VRRSuH0fMBc8+PUvsR1wq83Us1Ni+ukoj4k1B39kUkIGhG7/TsonZb7Di9s0POwaDaPuQlqMKO8yzyMI6ydI+YjqxuUyIsT4CuJp8gK9WS5Bke3tdxmYEwuKTKddN/QNXkmXTppqoLbFIc1LdD6mmwmkloltfwPw29KCF08Gf+VB90qOIv5a4xzY0anHCjSZNYssYMy7YuYyYDwzpLST5GI1/fqoTzUYjCd+6CaI9geNbnf6f+4gxJ2Lfr6VHIVL0zvQ0EFB5rCjITZHVeAadP/O7VhQ1JFL8NxjAt9J0cFcML3jzLrNNJKBLakMPN1uENewmi6adIMo7ze332Hw7V6cjd5csRXNeacK4Kwbg1h2vXEd9KKzKMT1D1ccpsg1/GUIn3Og5JXsitjAf9l6YGsEFM3TKWB6oN5ltFi5cg8mLrhfA2jESzhzexwhHsstE+ZQrX6Ksh4hYyqymfrDb0JpHBGApqhmD1LUHD4nPYUDmrKjBzJQA91FhKO0ag7PA1Vk+IiysFqAUS2pzflXzQHW4zNkWw8fEVl8F6TiNgYHfpoRyrVAUVYEy6XEFgOVjcEinhzOe4dBSMP7gNn6r3cUmGWgQzPf7hNfHil3+kelnKzAQ1Bjbw9vdp1PIn6AFLHxhIxhO6YL0HmLbYthKhI92rohd4WsgHqLYyIdgZlQ6im9OeM/Pu3Q/RPdUb40X1QVnrQrmfO69d6l5BJnpES2hT3RF1SrJiG0nbJC8LiBQpRqa3LrKQ4WdEuePqmQWkgWhRiCXHup/oWac3aqgHyW8o4JSJQhuPBs2mGdg0jZJJbcDctJki+bsu6vH3BpgqvbD4VVmPUXcBCUTBFVKiBB/0HPhZWbGA/V/PVKl3L0SuYkm6/H8gM4jbHA3XrI6w+G1pSOATAOIzWSPKXxCNTDq447y0W60a0Hh8VgHhnQyclLTijdw1V2p0AQoNdB5W0BqARw8asgTleA27PafnvrD1wOiwvrBAUDnVmXZNxl0uZsu+O9QvsZ5ebkev/w4UP"></span><span style="display: none !important;"><input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334"></span><span style="display: none !important;"><input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="e7tARj00RMDfu4nOeRM4yGfj1HvxpK5o6a+OwODTo2vtlNYYEAezyTJaeFoUYejYEKJaRMErrIrXcL8oHo/SVvj6g9V+EtxERzjk9vSrEbmd5sc2efXK4CjWpyAPaAU7JjYEzXrN2HV4vSrhhLLJV4YyT6OZ6/FZlIwd9k6KNQQ="></span></form>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./i-Remote_files/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="./i-Remote_files/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>-->
+
+
+</body></html>
